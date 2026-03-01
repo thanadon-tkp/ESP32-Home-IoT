@@ -13,7 +13,7 @@ void setup()
 {
   Serial.begin(115200);
   wifi_setup(WIFI_SSID, WIFI_PASSWORD);
-  mqtt_setup(MQTT_SERVER, MQTT_PORT);
+  mqtt_setup(MQTT_SERVER, MQTT_PORT, MQTT_USERNAME, MQTT_PASSWORD);
   dht_init();
   mq135_init();
 }
