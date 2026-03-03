@@ -21,8 +21,6 @@ void dht_read()
     return;
   }
 
-  String payload = "{\"temperature\":" + String(temperature, 2) +
-                   ",\"humidity\":"    + String(humidity, 2) + "}";
-
-  client.publish(TOPIC_DHT22, payload.c_str());
+  mqtt_publish_sensor("temperature", temperature, "C");
+  mqtt_publish_sensor("humidity",    humidity,    "%");
 }

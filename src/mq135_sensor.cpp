@@ -12,7 +12,5 @@ void mq135_read()
 {
   int value = analogRead(MQ135_AO);
 
-  String payload = "{\"air_quality\":" + String(value) + "}";
-
-  client.publish(TOPIC_MQ135, payload.c_str());
+  mqtt_publish_sensor("air_quality", value, "raw");
 }

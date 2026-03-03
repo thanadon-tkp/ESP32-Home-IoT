@@ -16,6 +16,5 @@
 #define DHT_INTERVAL     2000UL   // 2 seconds
 #define MQ135_AO_INTERVAL 500UL  // 0.5 second
 
-// ─── MQTT Topics ──────────────────────────────────
-#define TOPIC_DHT22  "esp32/sensor/dht22"
-#define TOPIC_MQ135  "esp32/sensor/mq135"
+// ─── MQTT Environment ────────────────────────────
+#define MQTT_ENV "dev"
